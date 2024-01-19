@@ -1,0 +1,258 @@
+:root {
+    --colorOne: #FFFFFF;
+    --colorTwo: #CF7C1C;
+    --colorThree: #191919;
+    --colorFour: #8f3862;
+}
+* {
+    max-width: 100%;
+    max-height: 100%;
+}
+body {
+    font-family: montserrat;
+}
+html {
+    scroll-behavior: smooth;
+}
+.section-padding {
+    padding: 100px 0;
+}
+.line {
+    width: 200px;
+    background: var(--colorTwo);
+    height: 5px;
+    margin: 10px 0 35px;
+    border-radius: 50px;
+}
+header {
+    background: var(--colorOne);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.navbar-brand{
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 15px;
+    text-decoration: underline var(--colorTwo);
+}
+.nav-link {
+    color: var(--colorThree) !important;
+    font-weight: 600;
+}
+/* banner*/
+.banner {
+    position: relative;
+    background: url(banner.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    padding: 250px 0 200px;
+}
+.teffect h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.2em;
+    font-weight: 700;
+    animation: animate 3s steps(19) infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+@keyframes animate {
+    from{
+        width: 0;
+    }
+    to{
+        width: 580px;
+    }
+}
+.banner p {
+    margin: 1em 0 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #262626;
+}
+.banner a{
+    display: inline-block;
+    background: var(--colorFour);
+    border-radius: 2px;
+    color: var(--colorOne);
+    padding: 10px 25px;
+    margin-top: 30px;
+}
+/* about */
+.about-img img {
+    width: 100%;
+}
+.about-content{
+    padding-top: 30px;
+}
+.about-content h2{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.0;
+}
+.about-content a{
+    background: var(--colorFour);
+    border-radius: 2px;
+    color: var(--colorOne);
+    display: inline-block;
+    padding: 10px 25px;
+}
+/* stats */
+.stats {
+    text-align: center;
+    background: var(--colorFour);
+    color: var(--colorOne);
+}
+.stat i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.stat h2{
+    font-size: 40px;
+}
+/* portfolio */
+
+.section-header{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-header .line{
+    margin: 15px auto;
+}
+.row.port-img img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.portfolio img:hover{
+    transition: all .9s;
+    opacity: .5;
+}
+/* quotes */
+
+.quotes {
+    text-align: center;
+    background:var(--colorFour);
+    color: var(--colorThree);
+    font-size: 1.3em;
+}
+.quotes .btn-primary{
+    background: var(--colorOne);
+    border: none;
+    color: var(--colorThre);
+}
+/* services */
+
+.single-services {
+    padding: 40px 20px;
+    margin: 0 15px 15px;
+    text-align: center;
+}
+.service-icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+}
+.service-icon i {
+    font-size: 35px;
+    color: var(--colorThree);
+}
+.single-services:hover i {
+    transform: scale(1.4) rotate(360deg);
+    transition: 0.9s;
+    color: var(--colorTwo);
+}
+.single-services h2 {
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+.single-services:hover h2{
+    color: var(--colorTwo);
+    transition: 0.9s;
+}
+/* contact */
+.single-contact {
+    padding: 10%;
+    text-align: center;
+}
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin: 15px auto;
+}
+.contact-icon i {
+    color: var(--colorFour);
+    font-size: 35px;
+}
+.contact .btn-primary{
+    color: var(--colorOne);
+    background: var(--colorFour);
+    border: none;
+}
+/* footer */
+
+footer {
+    background: var(--colorFour);
+    padding: 15px 0;
+    text-align: center;
+}
+footer p {
+    color: var(--colorOne);
+}
+
+/* responsive */
+
+@media (min-width: 768px) and (max-width: 991px){
+    .banner {
+        padding: 364px 0 0;
+        background-position: 68% 100%;
+    }
+    .stat {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px){
+    body {
+        overflow-x: hidden;
+    }
+    .section-padding{
+        padding: 80px 0;
+    }
+    .banner{
+        padding: 150px 0 0;
+        background-position: 62% 100%;
+    }
+    .banner h2 {
+        font-size: 2.8em;
+        font-weight: 500;
+    }
+    .banner p {
+        font-size: 1.2em;
+        color: var(--colorThree);
+    }
+    .about-content h2 {
+        font-size: 21px;
+    }
+    .about-img img {
+        width: 100%;
+    }
+    .stat{
+        margin-bottom: 30px;
+    }
+    .single-contact{
+        margin-bottom: 40px;
+    }
+    .single-services{
+        padding: 0;
+        margin: 0;
+    }
+
+}
